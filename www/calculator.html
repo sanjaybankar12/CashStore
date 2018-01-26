@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #000;">
+<head>
+  <meta charset="utf-8">
+  <title>Cash Management App</title>
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="stylesheet" href="css/font.css" cache="false">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+	#main {
+		width: 100%;
+	}
+
+	#keypad {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		margin: 15px 4px 3px 0px;
+	}
+
+	#keypad > div {
+		height: 40px;
+		font-size: 16px;
+		width: 100%;
+		overflow: hidden;
+		border-bottom: 1px solid black;
+	}
+
+	#keypad > div.display > input {
+		font-size: 30pt;
+		width: 98%;
+		text-align: right;
+		background-color: #000;
+		color: #fff;
+		border: none;
+		padding: 0;
+	}
+
+	#keypad > div > div {
+		padding-top: 10px;
+		border-right: 1px solid black;
+		width: 24.5%;
+		text-align: center;
+		background-color: #CFD0D2;
+		color: #272727;
+		display: inline-block;
+		height: 100%;
+		float:left;
+	}
+
+	#keypad > div.horizontal.display {
+		border: none;
+		margin-bottom: 10px;
+	}
+
+	#keypad > div > div.double-wide {
+		width: 49.1%;
+	}
+
+	.num-key {
+		background-color: #CFD0D2;
+	}
+
+	#keypad > div > div.control-key {
+		background-color: #C1C2C4;
+		color: #1D1D1D;
+	}
+
+	#keypad > div > div.operation-key {
+		background-color: #F57A12;
+		color: #fff;
+	}
+	</style>
+
+  <!--[if lt IE 9]>
+    <script src="js/ie/respond.min.js" cache="false"></script>
+    <script src="js/ie/html5.js" cache="false"></script>
+  <![endif]-->
+	
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script><script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Bootstrap -->
+<script src="js/jquery.ui.touch-punch.min.js" cache="false"></script>
+  <script type="text/javascript" src="js/system/calculator.js"></script>
+  <script type="text/javascript" src="js/system/ready.js"></script>
+  <script type="text/javascript" src="js/system/router.js"></script>
+	
+</head>
+<body onload="init()">
+				  <div id="rim">
+					<div id="keypad">
+					  <div class="horizontal display">
+						<input id="displayPanel" type="text" value="0" readonly="readonly"/>
+					  </div>
+					  <div class="horizontal ">
+						<div id="keyC" data-rnc-tag="C" class="key control-key">C</div>
+						<div id="keyCe" data-rnc-tag="CE" class="key control-key">CE</div>
+						<div id="keyPlusMinus" class="key control-key">+/-</div>
+						<div id="keyDivide" class="key operation-key">/</div>
+					  </div>
+					  <div class="horizontal">
+						<div id="key7" data-rnc-tag="7" class="key">7</div>
+						<div id="key8" data-rnc-tag="8" class="key">8</div>
+						<div id="key9" data-rnc-tag="9" class="key">9</div>
+						<div id="keyMultiply" class="key operation-key">x</div>
+					  </div>
+					  <div class="horizontal">
+						<div id="key4" data-rnc-tag="4" class="key">4</div>
+						<div id="key5" data-rnc-tag="5" class="key">5</div>
+						<div id="key6" data-rnc-tag="6" class="key">6</div>
+						<div id="keySubtract" class="key operation-key">-</div>
+					  </div>
+					  <div class="horizontal">
+						<div id="key1" data-rnc-tag="1" class="key">1</div>
+						<div id="key2" data-rnc-tag="2" class="key">2</div>
+						<div id="key3" data-rnc-tag="3" class="key">3</div>
+						<div id="keyAdd" class="key operation-key">+</div>
+					  </div>
+					  <div class="horizontal">
+						<div id="key0" data-rnc-tag="0" class="key">0</div>
+						<div id="keyDecimalPoint" data-rnc-tag="." class="key">.</div>
+						<div id="keyPercent" class="key control-key">%</div>
+						<div id="keyEquals" class="key operation-key">=</div>
+					  </div>
+					  <div class="horizontal">
+						<div id="keyCancel" onclick="javascript:location.href='index.html'" class="key double-wide">Cancel</div>
+						<div id="keyDone" onclick="javascript:location.href='index.html'" class="key double-wide">Done</div>
+					  </div>
+					</div>
+				  </div>
+</body>
+</html>

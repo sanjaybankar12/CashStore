@@ -1,0 +1,420 @@
+body
+{
+    background-color: #00CC35;
+}
+.m_container
+{
+    background-color: transparent;
+}
+.m_hd
+{
+    background-color: #fff;   
+    text-align: center;
+	position:fixed;
+	width:100%;
+	top:0;
+	left:0;
+}
+.amt
+{
+    width: 55px;  
+    margin: 0;
+    font-size: 14px;
+    
+}
+#logo
+{
+    height: auto;
+    margin: 2% auto;
+	cursor:pointer;
+	background-color: #fff;
+		
+
+}
+.middle_section
+{
+	padding:30px 20px;
+	text-align:center;
+	margin-top:60px;
+	height:260px;
+}
+
+.col1
+{
+	width:90px;
+	cursor:pointer;
+	float:left;
+	margin:6% 8%;
+}
+.col2
+{
+	width:90px;
+	cursor:pointer;
+	float:left;
+	margin:6% 8%;
+}
+.add
+{
+	width:70px;
+	margin:0 auto;
+	text-align:center;
+
+}
+.c_r
+{
+	text-align:center;
+	clear:both;
+	color:#fff;
+	font-size:14px;
+}
+.row1
+{
+	width:100%;
+}
+.row2
+{
+	width:100%;
+}
+.m_foot
+{
+	background-color:#FDCE09;
+	height:90px;
+	width:100%;
+	text-align:center;
+	font-family:verdana;
+    position: fixed;
+	z-index:5;
+	opacity:0.9;
+	bottom:0;
+}
+#ft
+{
+	font-size:20px;
+	font-weight:bold;
+	color:#333;
+	line-height:1.2;
+    background-color:#FDCE09;
+    width: 100%;
+	
+}
+#ft img
+{
+   
+    height: auto;
+    width: 21%;
+    margin-top: 1%;
+}
+
+/* new Records*/
+
+.addRec
+{
+	margin:5% auto;
+	text-align:center;
+	width:85%;
+	margin-top:100px;
+
+}
+#loan_form h3
+{
+	margin:0;
+	padding:0;
+	font-family:verdana,sans-serif;
+	font-size:16px;
+	color:#333;
+
+}
+#loan_form .error
+{
+	border-color:#990000;
+	color:#990000;
+}
+#res
+{
+	font-size:15px;
+	text-align:center;
+	color:#002FCA;
+}
+#name,#amount,#date
+{
+	width:96%;
+	padding:2%;
+	font-size:15px;
+	margin-top:15px;
+	border:1px solid #666;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	
+}
+#date
+{
+	background-color:#ddd;
+
+}
+#process
+{
+	width:100%;
+	padding:2%;
+	font-size:15px;
+	margin-top:15px;
+	border:1px solid #666;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#process option
+{
+	background-color:#FDCE09;
+}
+#s_but
+{
+	width:96%;
+	font-weight:bold;
+	padding:2%;
+	background-color:#FDCE09;
+	margin-top:15px;
+	border:1px solid #666;
+	cursor:pointer;
+	font-size:16px;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+}
+
+/* cash details */
+.mid_cashdetails
+{
+	margin:5% auto;
+	text-align:center;
+	width:85%;
+	margin-top:80px;
+	
+}
+.cat
+{
+	text-align:center;
+	color:#444;
+}
+.cat  h3
+{
+	margin-bottom:8px;
+	font-size:17px;
+	color:#FF6945;
+}
+.details
+{
+	text-align:center;
+	margin:3% 0;
+}
+.red
+{
+	color:red;
+    font-weight: bold;
+    cursor: pointer;
+}
+#note
+{
+	font-size:13px;
+	color:#555;
+	line-height:1.1;
+	margin:0;
+	margin-bottom:5px;
+	text-align:center;
+}
+#myTab
+{
+	text-align:center;
+	width:100%;
+}
+#myTab, tr,th,td
+{
+	border:1px solid #222;
+	border-collapse:collapse;
+    color:#333;
+}
+#myTab th
+{
+	background-color:#F8C100;
+	color:#333;
+}
+
+/* total loan*/
+
+.tot_loan
+{
+    margin:5% auto;
+	text-align:center;
+	width:90%;
+	margin-top:110px;     
+}
+.tot_loan h2
+{
+    text-align: center;
+    font-size: 18px;
+	color:#FF6945;
+}
+.tla
+{
+	color:#FF6945;
+}
+#cd h3
+{
+    text-align: center;
+    font-size: 16px;
+	color:#333;
+}
+
+/* responsive */
+
+@media only screen and (min-width:450px) 
+{
+    .amt
+    {
+        width:80px;
+        font-size: 16px;
+    }
+    
+    .m_hd
+{
+    background-color: #fff;   
+    text-align: center;
+	position:fixed;
+	width:100%;
+	top:0;
+    height: 75px;
+	left:0;
+}
+
+#logo
+{
+    height: auto;
+    margin: 2% auto;
+	cursor:pointer;
+	background-color: #fff;
+		
+
+}
+    
+.middle_section
+{
+	padding:30px 20px;
+	text-align:center;
+	margin-top:60px;
+	height:auto;
+}
+
+.col1
+{
+	width:90px;
+	cursor:pointer;
+	float:left;
+	margin:5% 5%;
+}
+.col2
+{
+	width:90px;
+	cursor:pointer;
+	float:left;
+	margin:5% 5%;
+}
+.add
+{
+	width:70px;
+	margin:0 auto;
+	text-align:center;
+
+}
+.c_r
+{
+	text-align:center;
+	clear:both;
+	color:#fff;
+	font-size:14px;
+}
+.row1
+{
+	width:50%;
+	float:left;
+}
+.row2
+{
+	width:50%;
+	float:left;
+}
+	
+.m_foot
+{
+	background-color:#fff;
+	height:70px;
+	width:100%;
+	text-align:center;
+	font-family:verdana;
+    position: fixed;
+	z-index:5;
+	opacity:0.9;
+	bottom:0;
+}
+#ft
+{
+	font-size:15px;
+	font-weight:bold;
+	color:#00CC35;
+	line-height:1.2;
+	padding:3% 5% 5% 3%;	
+
+}
+.addRec
+{
+	margin:5% auto;
+	text-align:center;
+	width:85%;
+	margin-top:85px;
+	margin-bottom:90px;
+
+}
+
+#s_but
+{
+	width:96%;
+	font-weight:bold;
+	padding:2%;
+	background-color:#FDCE09;
+	margin-top:16px;
+	border:1px solid #666;
+	cursor:pointer;
+	font-size:16px;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+}
+.mid_cashdetails
+{
+	margin:5% auto;
+	text-align:center;
+	width:85%;
+	margin-top:80px;
+	margin-bottom:90px;
+}
+
+.tot_loan
+{
+    margin:5% auto;
+	text-align:center;
+	width:90%;
+	margin-top:85px;  
+	margin-bottom:90px;
+	
+}
+
+#ft{
+    margin: 0;
+}
+    
+#ft img
+{
+   
+    height: 35px;
+    margin-left: 15px;
+    margin-right: 40px;
+    width: 80px;
+    margin-top: 0;
+}
+
+}

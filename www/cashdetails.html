@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Cash Details</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+	    <link rel="stylesheet" href="css/wel.css"> 
+
+     <link rel="stylesheet" href="css/style.css"> 
+     <link rel="stylesheet" href="css/jquery-ui.css"> 
+     <link rel="stylesheet" href="css/plugin.css"> 
+  
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/db.js"></script>
+    
+    <script>
+        $(document).ready(function()
+        {
+            var type="";
+            init_client();
+			
+			$("input:radio[name=cat]").click(function()
+			{
+				var typeval=$(this).val();
+                type=typeval;
+                getDetails(typeval);
+			});
+            
+            $("#myTab tbody").on('click','.red',function()
+            {
+                var cid=$(this).children("input").val();
+                var cnf=confirm("Do you want to remove record?");
+                if(cid+""!=="undefined" && cnf===true)
+                {
+                    removeDetails(cid,type);
+                }
+                return false;
+            });
+            
+            $("#myTab tbody").on('click','.nm',function()
+            {
+                var cid=$(this).children("input").val();
+                
+                var amount=$(".am").children("input").filter(function(index) { return $(this).val()===""+cid;}).parent().children(".amt").val();
+                var check=$.isNumeric(amount);
+                if(cid+""!=="undefined" && check===true)
+                {
+                    updateDetails(cid,type,amount);
+                    
+                }
+                else
+                {
+                    navigator.notification.alert("Amount must be number.",function(){ },"Warning","Ok");
+                }
+                return false;
+            });
+        });
+    </script>
+   <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2185799880166711",
+        enable_page_level_ads: true
+      });
+    </script>-->
+</head>
+
+<body style="margin:0; padding:0;">
+    <div class="m_container">
+        <header class="m_hd">
+            <img id="logo" onclick="javascript:location.href='index.html'" src="images/cs.png" alt="Cash Details"/>
+        </header>
+        
+		<div class="mid_cashdetails">
+			<div class="cat">
+				<h3>Select category : </h3>
+				<input type="radio" value="1" name="cat"/>&nbsp;Given
+				<input type="radio" value="2" name="cat"/>&nbsp;Taken
+			</div>
+			<div class="details">
+			<h4 id="note">Click on amount to edit & click on name to update it</h4>
+				<table id="myTab">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Amount</th>
+						<th>Date</th>
+						<th>Drop</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<footer class="m_foot">
+			<div id="ft">
+                <a href="newRecords.html"><img src="images/back.png" /></a>
+                <a href="index.html"><img src="images/hmnew.png" /></a>
+                <a href="newRecords.html"><img src="images/addnew.png" /></a>
+                <a href="totalloan.html"><img src="images/next.png" /></a>
+            </div>                    
+		</footer>
+    </div>
+		
+</body>
+</html>
