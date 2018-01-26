@@ -65,7 +65,10 @@
         var db=html5client.webdb.db;
         db.transaction(function(tx)
         {
-            tx.executeSql("DELETE FROM cash_tab WHERE id=?",[cid],function(){alert("Record deleted.");  getDetails(type);});
+            tx.executeSql("DELETE FROM cash_tab WHERE id=?",[cid],function(){
+                navigator.notification.alert("Record successfully deleted.",function(){ },"Message","Ok");
+                getDetails(type);
+            });
         });
     }
     function  updateDetails(cid,type,amount)
@@ -73,7 +76,10 @@
         var db=html5client.webdb.db;
         db.transaction(function(tx)
         {
-            tx.executeSql("UPDATE cash_tab SET amount=? WHERE id=?",[amount,cid],function(){ alert("Record updated."); getDetails(type); });
+            tx.executeSql("UPDATE cash_tab SET amount=? WHERE id=?",[amount,cid],function(){ 
+                navigator.notification.alert("Record successfully updated.",function(){ },"Message","Ok");
+                getDetails(type);
+            });
         });
     }
     

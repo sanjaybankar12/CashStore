@@ -44,11 +44,14 @@
             $("#myTab tbody").on('click','.red',function()
             {
                 var cid=$(this).children("input").val();
-                var cnf=confirm("Do you want to remove record?");
-                if(cid+""!=="undefined" && cnf===true)
-                {
-                    removeDetails(cid,type);
-                }
+                navigator.notification.confirm("Do you want to remove record?",function(buttonIndex){
+                    if(cid+""!=="undefined" && buttonIndex==1)
+                    {
+                        removeDetails(cid,type);
+                    }
+                
+                },"Confirm",["YES","NO"]);
+                
                 return false;
             });
             
